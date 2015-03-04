@@ -6,6 +6,10 @@ import (
 )
 
 func main() {
-	arg := os.Args[1]
-	fmt.Println(arg)
+	args := os.Args
+	if len(args) > 1 {
+		fmt.Println(args[1])
+	} else {
+		fmt.Println("Hello")
+	}
 }
